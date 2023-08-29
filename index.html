@@ -1,1 +1,302 @@
-shed.sh
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Shed Server Management</title>
+    <link href="https://i.shed.sh/assets/css/app.css" rel="stylesheet" type="text/css">
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="msapplication-TileColor" content="#ff0000" />
+    <meta name="theme-color" content="#292935" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * self blob: data: gap:; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;">
+</head>
+<body class="overflow-y-scroll font-sans antialiased">
+<div id="app">
+    <div
+            class="relative flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-gray-800 to-gray-900 selection:bg-red-500 selection:text-white"
+    >
+        <div class="absolute left-1/2 top-0 ml-[-50%] h-[50vh] w-full">
+            <div
+                    class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-indigo-700 opacity-70 [mask-image:radial-gradient(farthest-side_at_top,white,transparent)]"
+            ></div>
+        </div>
+
+        <div class="z-10 mx-auto flex max-w-7xl flex-grow flex-col items-center justify-center p-6 lg:p-8">
+            <div class="flex flex-col justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3200 1000.6316174958881" class="h-24 w-full sm:h-32 sm:w-auto">
+                    <g transform="scale(10) translate(10, 10)">
+                        <defs id="SvgjsDefs1109"></defs><g id="SvgjsG1110" featureKey="symbolFeature-0" transform="matrix(0.8421052631578947,0,0,0.8421052631578947,-2.4261052984940377,-2.4901052776135897)" fill="#b469ff"><g xmlns="http://www.w3.org/2000/svg"><path d="M2.881,59.625v25.604l22.175,12.803L47.23,85.229V59.625L25.056,46.822L2.881,59.625z M37.778,79.772l-12.722,7.345   l-12.723-7.345v-14.69l12.723-7.346l12.722,7.346V79.772z"></path><path d="M72.556,15.759L50.381,2.957L28.206,15.76v25.605l22.175,12.803l22.175-12.803V15.759z M63.104,35.907l-12.723,7.346   l-12.722-7.346v-14.69l12.722-7.346l12.723,7.346V35.907z"></path><path d="M75.707,46.822L53.531,59.625v25.604l22.175,12.803l22.175-12.803V59.625L75.707,46.822z M88.429,79.772l-12.723,7.345   l-12.723-7.345v-14.69l12.724-7.346l12.722,7.346V79.772z"></path></g></g><g id="SvgjsG1111" featureKey="nameFeature-0" transform="matrix(1.3417135837854437,0,0,1.3417135837854437,92.9770671256014,13.322586754017811)" fill="#b469ff"><path d="M24.922 1.4059999999999988 c-2.8646 0 -5.5209 0.4686 -7.9688 1.4061 c-2.3959 0.9375 -4.4792 2.2396 -6.2501 3.9063 c-1.7188 1.5625 -3.0729 3.5416 -4.0625 5.9375 c-0.83336 2.0313 -1.3021 4.2448 -1.4063 6.6406 l0 2.3438 l6.875 0 l0 -2.3438 c0.10414 -1.7709 0.39063 -3.2031 0.85938 -4.2969 c0.625 -1.5104 1.4844 -2.8645 2.5781 -4.0624 c1.3021 -1.1979 2.6563 -2.0833 4.0625 -2.6562 c1.6146 -0.625 3.3855 -0.9375 5.3126 -0.9375 l9.8438 0 l0 -5.9375 l-9.8438 0 z M27.891 18.984 l0.000076294 1.4843 l0.078125 0 c-0.10414 1.6666 -0.41664 3.2031 -0.9375 4.6094 c-0.67711 1.6146 -1.5365 2.9427 -2.5781 3.9844 c-1.1459 1.1459 -2.5 2.0313 -4.0625 2.6563 c-1.6146 0.625 -3.3855 0.9375 -5.3126 0.9375 l-9.8438 0 l0 5.9375 l9.8438 0 c2.8646 0 5.5209 -0.46875 7.9688 -1.4063 c2.3959 -0.9375 4.4792 -2.2396 6.2501 -3.9063 c1.8229 -1.8229 3.177 -3.802 4.0624 -5.9374 c0.9375 -2.0834 1.4063 -4.375 1.4063 -6.875 l0 -1.4844 l-6.875 0 z M51.094 16.875 l0 -15.547 l-6.5625 0 l0 37.344 l6.5625 0 l0 -21.797 z M68.98400000000001 1.328000000000003 l0 15.547 l-11.406 0 l0 6.0938 l11.406 0 l0 15.703 l6.4844 0 l0 -37.344 l-6.4844 0 z M86.0938 1.4059999999999988 l27.813 0 l0 5.9375 l-27.813 0 l0 -5.9375 z M86.0938 32.6562 l27.734 0 l0 5.9375 l-27.734 0 l0 -5.9375 z M86.0938 16.875 l25.078 0 l0 5.8594 l-25.078 0 l0 -5.8594 z M152.813 27.344 c-0.98961 2.3959 -2.3438 4.375 -4.0625 5.9375 c-1.7709 1.6666 -3.8542 2.9688 -6.2501 3.9063 s-5.0781 1.4063 -8.0469 1.4063 l-8.6719 0 l0 -5.9375 l8.5938 0 c1.9791 0 3.776 -0.3125 5.3906 -0.9375 c1.5625 -0.625 2.9166 -1.5104 4.0625 -2.6563 s2.0313 -2.5 2.6563 -4.0625 s0.9375 -3.2813 0.9375 -5.1563 c0 -1.8229 -0.3125 -3.5156 -0.9375 -5.0781 c-0.625 -1.6146 -1.5104 -2.9427 -2.6563 -3.9844 c-1.0416 -1.0938 -2.3958 -1.9791 -4.0624 -2.6563 c-1.6666 -0.625 -3.4635 -0.9375 -5.3906 -0.9375 l-8.5938 0 l0 -5.9375 l8.6719 0 c2.7604 0 5.4166 0.49477 7.9688 1.4844 c2.3959 0.88539 4.5052 2.2135 6.3281 3.9844 c1.7709 1.6146 3.125 3.5938 4.0625 5.9375 c0.98961 2.3959 1.4844 4.8438 1.4844 7.3438 c0 2.7084 -0.49477 5.1563 -1.4844 7.3438 z"></path></g>
+                    </g>
+                </svg>
+
+                <p class="mt-12 max-w-3xl text-center text-2xl font-medium leading-relaxed text-white sm:text-3xl sm:leading-relaxed">
+                    The solution for seamless server provisioning and zero-downtime PHP deployment.
+                </p>
+            </div>
+
+            <div class="flex flex-col justify-center">
+                <p class="mt-12 max-w-3xl text-center text-lg font-medium leading-relaxed text-white sm:text-lg sm:leading-relaxed">
+                    We are launching 4th Sept 2023, join the waitlist to try the beta before it's publicly available.
+                </p>
+
+                <form class="sm:mx-auto sm:max-w-xl lg:mx-0 mt-6" action="https://api.web3forms.com/submit" method="post">
+                    <div class="sm:flex">
+                        <input type="hidden" name="access_key" value="13289984-9ffb-4f02-adcd-ad2e4bf8ad34">
+                        <input type="hidden" name="subject" value="New Waitlist">
+                        <div class="min-w-0 flex-1">
+                            <label for="email" class="sr-only">Email address</label>
+                            <input id="email" name="email" type="email" placeholder="Enter your email" class="block w-full rounded-md border-0 bg-gray-200 px-4 py-3 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400" value="" autocomplete="off">
+                        </div>
+                        <div class="mt-3 sm:mt-0 sm:ml-3">
+                            <button type="submit" class="bg-indigo-500 block w-full rounded-md bg-pink-500 py-3 px-4 font-medium text-white shadow hover:bg-pink-400 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-gray-900">Join Waitlist</button>
+                        </div>
+                    </div>
+                </form>
+                <script src="https://web3forms.com/client/script.js" async defer></script>
+            </div>
+            <div class="mt-12 flex justify-center space-x-4"></div>
+        </div>
+    </div>
+
+    <div class="relative flex flex-col items-center justify-center bg-gradient-to-b from-gray-800 to-gray-900 px-8 py-24 selection:bg-red-500 selection:text-white">
+        <h2 class="mb-16 text-5xl font-bold tracking-tight text-white sm:text-6xl">Shed's Features</h2>
+
+        <div class="flex max-w-5xl grid-cols-3 flex-col items-center gap-16 md:grid">
+            <div class="prose-xl text-gray-100 md:col-span-2">
+                <h2 class="text-green-400">Server Provisioning</h2>
+                <p>
+                    Looking for a hassle-free solution to manage and deploy servers and websites?
+                    <b class="text-white">Shed Server Management</b>
+                    has got you covered! Our cutting-edge service makes it super easy to create servers on
+                    <b class="text-white">Digital Ocean</b>
+                    and
+                    <b class="text-white">Hetzner Cloud</b>
+                    and provision them with the latest Ubuntu version. Try Shed today!
+                </p>
+            </div>
+
+            <img
+                    src="https://i.shed.sh/assets/img/features/provisioning.png"
+                    alt="Easy server provisioning at Shed Server Management"
+                    class="rounded shadow-md sm:w-1/2 md:w-full"
+            />
+        </div>
+
+        <div class="mt-16 max-w-5xl self-start sm:mt-20 lg:mt-24 lg:self-auto">
+            <dl class="grid grid-cols-1 gap-x-16 gap-y-16 sm:grid-cols-2 lg:max-w-none lg:grid-cols-3">
+                <div class="flex flex-col" icon="heroicon-o-cpu-chip" title="Cloud Providers">
+                    <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                        <svg class="h-5 w-5 flex-none text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z"/>
+                        </svg>        Cloud Providers
+                    </dt>
+                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-200">
+                        <p class="flex-auto">Shed supports Digital Ocean and Hetzner Cloud out of the box, but you can choose any cloud provider you want. All you need is a VPS with root
+                            access.</p>
+                    </dd>
+                </div>
+                <div class="flex flex-col" icon="heroicon-o-inbox-arrow-down" title="Software Installation">
+                    <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                        <svg class="h-5 w-5 flex-none text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 3.75H6.912a2.25 2.25 0 00-2.15 1.588L2.35 13.177a2.25 2.25 0 00-.1.661V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 00-2.15-1.588H15M2.25 13.5h3.86a2.25 2.25 0 012.012 1.244l.256.512a2.25 2.25 0 002.013 1.244h3.218a2.25 2.25 0 002.013-1.244l.256-.512a2.25 2.25 0 012.013-1.244h3.859M12 3v8.25m0 0l-3-3m3 3l3-3"/>
+                        </svg>        Software Installation
+                    </dt>
+                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-200">
+                        <p class="flex-auto">Installing and configuring software can be a pain. Shed takes care of that for you. It installs Caddy, PHP, MySQL, Redis, and all the other tools
+                            you need.</p>
+                    </dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+    <div class="relative flex flex-col items-center justify-center bg-gradient-to-l from-gray-800 to-gray-900 px-8 py-24 selection:bg-red-500 selection:text-white">
+        <div class="flex max-w-5xl grid-cols-3 flex-col-reverse items-center gap-16 md:grid">
+            <img src="https://i.shed.sh/assets/img/features/site.png" alt="Site management at Shed Server Management" class="rounded shadow-md sm:w-1/2 md:w-full" />
+
+            <div class="prose-xl text-gray-100 md:col-span-2">
+                <h2 class="text-green-400">Zero Downtime Deployment</h2>
+                <p>
+                    Our platform offers a seamless Zero Downtime Deployment solution for
+                    <b class="text-white">Laravel, PHP, static, and Wordpress sites</b>
+                    , with a variety of customizable deployment options. Manage cronjobs, firewall rules, and MySQL 8 with ease, plus SSH key management and
+                    background daemon support.
+                    <b class="text-white">Deploy with confidence!</b>
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-16 max-w-5xl self-start sm:mt-20 lg:mt-24 lg:self-auto">
+            <dl class="grid grid-cols-1 gap-x-16 gap-y-16 sm:grid-cols-2 lg:max-w-none lg:grid-cols-3">
+                <div class="flex flex-col" icon="heroicon-o-adjustments-horizontal" title="Caddy Web Server">
+                    <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                        <svg class="h-5 w-5 flex-none text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"/>
+                        </svg>        Caddy Web Server
+                    </dt>
+                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-200">
+                        <p class="flex-auto">Caddy is our web server of choice. It's fast, secure, and easy to configure. We provide a near-perfect Caddy configuration for each site type.</p>
+                    </dd>
+                </div>
+                <div class="flex flex-col" icon="heroicon-o-forward" title="Zero Downtime Deployment">
+                    <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                        <svg class="h-5 w-5 flex-none text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062A1.125 1.125 0 013 16.81V8.688zM12.75 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062a1.125 1.125 0 01-1.683-.977V8.688z"/>
+                        </svg>        Zero Downtime Deployment
+                    </dt>
+                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-200">
+                        <p class="flex-auto">Nobody likes downtime. That's why Shed supports Zero Downtime Deployment out of the box. Deploy your sites with confidence, even on Fridays!</p>
+                    </dd>
+                </div>
+                <div class="flex flex-col" icon="heroicon-o-lock-closed" title="SSL Certificates">
+                    <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                        <svg class="h-5 w-5 flex-none text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/>
+                        </svg>        SSL Certificates
+                    </dt>
+                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-200">
+                        <p class="flex-auto">While you can bring your own SSL certificates, Caddy can also automatically provision free SSL certificates using Let's Encrypt or ZeroSSL and
+                            automatically renew them.</p>
+                    </dd>
+                </div>
+                <div class="flex flex-col" icon="heroicon-o-check-badge" title="Optimized per Site">
+                    <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                        <svg class="h-5 w-5 flex-none text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/>
+                        </svg>        Optimized per Site
+                    </dt>
+                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-200">
+                        <p class="flex-auto">Shed comes with built-in support for Laravel, generic PHP, static, and Wordpress sites. It provides a starting point for each site type and can be
+                            customized to your needs.</p>
+                    </dd>
+                </div>
+                <div class="flex flex-col" icon="heroicon-o-cursor-arrow-rays" title="Push to Deploy">
+                    <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                        <svg class="h-5 w-5 flex-none text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59"/>
+                        </svg>        Push to Deploy
+                    </dt>
+                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-200">
+                        <p class="flex-auto">Deploying your sites from the UI is just a click away. But you can also use version control or CI/CD tools to deploy your sites automatically!</p>
+                    </dd>
+                </div>
+                <div class="flex flex-col" icon="heroicon-o-bolt" title="PHP version per Site">
+                    <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                        <svg class="h-5 w-5 flex-none text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
+                        </svg>        PHP version per Site
+                    </dt>
+                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-200">
+                        <p class="flex-auto">Not all your sites might be on the same PHP version. Shed allows you to choose the a version per site, so you can maintain sites at your own pace
+                            while still keeping them on the same server.</p>
+                    </dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+
+    <div class="relative flex flex-col items-center justify-center bg-gradient-to-b from-gray-800 to-gray-900 px-8 py-24 selection:bg-red-500 selection:text-white">
+        <div class="flex max-w-5xl grid-cols-3 flex-col items-center gap-16 md:grid">
+            <div class="prose-xl col-span-2 text-gray-100">
+                <h2 class="text-green-400">Easy-to-Use Interface</h2>
+                <p>
+                    Our platform offers a user-friendly interface for effortless script configuration and deployment. You can easily edit configuration files and
+                    view log files through our interface. Plus, it's responsive, so you can access it on mobile devices too.
+                    <b class="text-white">Github integration</b>
+                    is available for easy code deployment from your repositories.
+                </p>
+            </div>
+
+            <img src="https://i.shed.sh/assets/img/features/editor.png" alt="Easy-to-use interface at Shed Server Management" class="rounded shadow-md sm:w-1/2 md:w-full" />
+        </div>
+
+        <div class="mt-16 max-w-5xl self-start sm:mt-20 lg:mt-24 lg:self-auto">
+            <dl class="grid grid-cols-1 gap-x-16 gap-y-16 sm:grid-cols-2 lg:max-w-none lg:grid-cols-3">
+                <div class="flex flex-col" icon="heroicon-o-circle-stack" title="GitHub Integration">
+                    <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                        <svg class="h-5 w-5 flex-none text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"/>
+                        </svg>        GitHub Integration
+                    </dt>
+                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-200">
+                        <p class="flex-auto">Once you've connected your GitHub account, we can add the server's SSH key to deploy your repositories. When you add a site, we'll automatically
+                            list your repositories.</p>
+                    </dd>
+                </div>
+                <div class="flex flex-col" icon="heroicon-o-document-check" title="Customize configuration files">
+                    <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                        <svg class="h-5 w-5 flex-none text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12"/>
+                        </svg>        Customize configuration files
+                    </dt>
+                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-200">
+                        <p class="flex-auto">Most of the important configuration files can be edited through the interface, including Caddy, PHP and MySQL configuration files. It even validates
+                            the syntax for you.</p>
+                    </dd>
+                </div>
+                <div class="flex flex-col sm:col-span-2 lg:col-span-1" icon="heroicon-o-clock" title="Cronjobs and Daemons">
+                    <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                        <svg class="h-5 w-5 flex-none text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>        Cronjobs and Daemons
+                    </dt>
+                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-200">
+                        <p class="flex-auto">Want to run scheduled tasks or background daemons like queues or websockets? No problem! You can easily add cronjobs and daemons through the
+                            interface.</p>
+                    </dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+    <div class="relative flex flex-col items-center justify-center bg-gradient-to-l from-gray-800 to-gray-900 px-8 py-24 selection:bg-red-500 selection:text-white">
+        <div class="flex max-w-5xl grid-cols-3 flex-col-reverse items-center gap-16 md:grid lg:gap-16">
+            <img src="https://i.shed.sh/assets/img/features/tls.png" alt="TLS settings at Shed Server Management" class="rounded shadow-md sm:w-1/2 md:w-full" />
+
+            <div class="prose-xl col-span-2 text-gray-100">
+                <h2 class="text-green-400">Robust Security and Flexibility</h2>
+                <p>
+                    Shed offers robust team management capabilities and advanced security features, such as two-factor authentication and
+                    <b class="text-white">automatic security updates</b>
+                    , to ensure servers remain secure and up-to-date. Users can also choose between automatic and custom SSL certificates, providing ultimate
+                    flexibility.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="relative flex flex-col items-center justify-center bg-gradient-to-b from-gray-800 to-gray-900 px-8 py-24 selection:bg-red-500 selection:text-white">
+        <div class="flex max-w-5xl grid-cols-3 flex-col items-center gap-16 md:grid">
+            <div class="prose-xl col-span-2 text-gray-100">
+                <h2 class="text-green-400">Database and File Backups</h2>
+
+                <p>
+                    Shed Server Management ensures automatic backups of your databases and files, supporting
+                    <b class="text-white">S3, FTP, and SFTP.</b>
+                    Customize backup schedules and retention policies to fit your requirements. Receive timely notifications for completed or failed backups. Say
+                    goodbye to data loss.
+                </p>
+            </div>
+
+            <img
+                    src="https://i.shed.sh/assets/img/features/backups.png"
+                    alt="Database and File Backups at Shed Server Management"
+                    class="rounded shadow-md sm:w-1/2 md:w-full"
+            />
+        </div>
+    </div>
+
+
+    <div class="relative flex flex-col items-center justify-center bg-gradient-to-t from-gray-900 to-gray-800 px-8 selection:bg-red-500 selection:text-white">
+        <footer class="mx-auto flex max-w-sm flex-col items-center text-center mt-auto pb-8 pt-12 text-gray-300">
+            <p class="mt-1">
+                &copy; 2023 - Shed
+            </p>
+            <p>
+
+            </p>
+        </footer>
+    </div>
+
+</div>
+</body>
+</html>
